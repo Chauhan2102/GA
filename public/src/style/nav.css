@@ -1,0 +1,25 @@
+body{
+    background-color: white;
+}
+h1{
+    color: white;   
+}
+.nav-bar{
+    background-color: blue;
+    padding: 10px;
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;   
+
+}
+.nav-a{
+    display: flex;        
+    gap: 15px; 
+}
+.nav-a a{
+ color: white;
+ font-size: 20px;
+}
+.nav-text{
+    text-align: left;
+}

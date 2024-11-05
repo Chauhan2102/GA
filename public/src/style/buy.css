@@ -1,0 +1,83 @@
+/* purchase.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color:blue ;
+}
+
+.book-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+}
+
+.book-card h3 {
+    margin-top: 10px;
+}
+
+.book-card p {
+    margin: 10px 0;
+}
+
+.quantity-input {
+    width: 50px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+.cart-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cart-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-container li {
+    margin: 10px 0;
+}
+
+#checkout-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background-color: #0056b3;
+}
