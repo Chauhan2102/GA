@@ -85,5 +85,60 @@
     </div>
 
     <script src="../functions/cart.js"></script>
+
+    <!-- DataLayer push code is placed below here for view_item_list event -->
+    <script>
+  // Clear any previous ecommerce data
+  dataLayer.push({ ecommerce: null });  // Clears any previous ecommerce data
+  var itemListName = document.querySelector('#page-heading').innerText;
+
+  // Push new event data to dataLayer
+  dataLayer.push({
+    event: "view_item_list",  // Event name
+    ecommerce: {
+      item_list_id: "books_on_sale",  // Unique list ID
+      item_list_name: itemListName,,  // Name of the list
+      items: [
+        {
+          item_id: "b1",  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector(".book-card:nth-child(1) h3").innerText,  // Dynamically fetch the book name
+          affiliation: "Book Store",  // Name of the store (can be dynamic)
+          price: document.querySelector(".book-card:nth-child(1) .quantity-input").getAttribute('data-price'),  // Fetch price from data-price attribute
+          quantity: document.querySelector("#quantity1").value,  // Dynamically get quantity selected by user
+          item_category: "Books",  // Static or dynamic category (if applicable)
+          item_variant: "Standard",  // Variant of the item (if applicable, like edition or color)
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",  // Store location ID (optional, if needed)
+          item_list_id: "books_on_sale",  // Same list ID as above
+          item_list_name: itemListName,,  // Same list name as above
+        },
+        {
+          item_id: "b2",  // Unique item ID for second book
+          item_name: document.querySelector(".book-card:nth-child(2) h3").innerText,  // Dynamically fetch second book name
+          affiliation: "Book Store",
+          price: document.querySelector(".book-card:nth-child(2) .quantity-input").getAttribute('data-price'),
+          quantity: document.querySelector("#quantity2").value,
+          item_category: "Books",
+          item_variant: "Standard",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          item_list_id: "books_on_sale",
+          item_list_name: itemListName,,
+        },
+        {
+          item_id: "b3",  // Unique item ID for third book
+          item_name: document.querySelector(".book-card:nth-child(3) h3").innerText,  // Dynamically fetch third book name
+          affiliation: "Book Store",
+          price: document.querySelector(".book-card:nth-child(3) .quantity-input").getAttribute('data-price'),
+          quantity: document.querySelector("#quantity3").value,
+          item_category: "Books",
+          item_variant: "Standard",
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+          item_list_id: "books_on_sale",
+          item_list_name: itemListName,,
+        }
+      ]
+    }
+  });
+</script>
+
 </body>
 </html>
