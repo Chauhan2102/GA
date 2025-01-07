@@ -42,7 +42,7 @@
     <!-- Login page start here -->
         <div class="login-container">
                 <h2>Login</h2>
-                <form class="login-form" action="#" method="POST">
+                <form id="login-form" class="login-form" action="#" method="POST">
                     <div class="input-group">
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username" required>
@@ -55,5 +55,13 @@
                 </form>
                 <p class="forgot-password"><a href="#">Forgot Password?</a></p>
             </div>
+            <script>
+                // Handle form submission
+                document.getElementById('login-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert("You have sucessfully logged in");
+                    // Here you would typically send the form data to your server
+                });
+            </script>
     </body>
     </html>
