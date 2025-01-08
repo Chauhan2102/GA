@@ -3,6 +3,11 @@
     <head>
     <script>
         window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'Login',  // Optional: a custom event for trigger purposes
+  'user_id': '123'      // Replace 'USER_ID' with the actual user ID
+  'method' : 'manually' // could be anyting as per users option mail, manual or phone number but for now manually
+});
         </script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
