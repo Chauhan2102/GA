@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        </script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PF8RZW34');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/public/src/style/nav.css">
+    <link rel="stylesheet" href="/public/src/style/buy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDP Page</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF8RZW34"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+     
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-text">
+            <h2>PDP page</h2>
+        </div>
+        <div class="nav-a">
+            <a href="../home.html" class="nav-a home-link">Home</a>
+            <a href="../purchasebook.html" class="nav-a buy-link">Buy</a>
+        </div>
+    </nav>
+
+    <!-- Book Purchase Section -->
+    <h1>Purchase Your Favorite Books</h1>
+
+    <!-- Cart-like layout for books -->
+    <div class="book-container">
+        <div class="book-card">
+            <img src="/public/src/images/book1.jpg" alt="Book 1">
+            <h3>Bhagavat Gita </h3>
+            <p>Price: $10</p>
+            <p>Description: The lessons of life how to live</p>
+            <label for="quantity1">Quantity:</label>
+            <input type="number" id="quantity1" name="quantity" min="1" value="1" data-price="10" class="quantity-input">
+            <button class="add-to-cart" data-book="Book 1" data-price="10"
+            onclick="
+            dataLayer.push({ ecommerce: null });
+  dataLayer.push({
+    event: 'add_to_cart',  
+    ecommerce: {
+        currency: 'USD',
+        value: 10,
+      items: [
+        {
+          item_id: 'b1',  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
+          affiliation: 'Book Store',  // Name of the store (can be dynamic)
+          coupon : 'SUMMER FUN',
+          discount : 2.22,
+          index : 0,
+          price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),  
+          quantity: document.querySelector('#quantity1').value,  
+          item_brand : 'Spiritual',
+          item_category: 'Books',  
+          item_variant: 'Standard', 
+          location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',  
+          item_list_id: 'books_on_sale',  
+          item_list_name: 'Purchase Your Favorite Books',
+        }
+      ]
+    }
+  });
+            "
+            >Add to Cart</button>
+            <div><a href="/public/src/pages/tutorial.html" class="tutorial-link">Tutorial</a></div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total: $<span id="total-price">0.00</span></h3>
+        <button id="checkout-btn"
+        onclick="
+            dataLayer.push({ ecommerce: null });
+  dataLayer.push({
+    event: 'purchase',  
+    ecommerce: {
+        transaction_id: 'T_123',
+    value: 72.05,
+    tax: 3.60,
+    shipping: 5.99,
+    currency: 'USD',
+    coupon: 'SUMMER_SALE',
+        value: 15,
+      items: [
+        {
+          item_id: 'b2',  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
+          affiliation: 'Book Store',  // Name of the store (can be dynamic)
+          coupon : 'SUMMER FUN',
+          discount : 2.22,
+          index : 0, 
+          item_brand : 'Spiritual',
+          item_category: 'Books',  
+          item_variant: 'Standard', 
+          location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',  
+          item_list_id: 'books_on_sale',  
+          item_list_name: 'Purchase Your Favorite Books',
+          price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),  
+          quantity: document.querySelector('#quantity1').value, 
+        }
+      ]
+    }
+  });
+            "
+        >Checkout</button>
+    </div>
+
+    <script src="/public/src/functions/cart.js"></script>
+
+    <!-- DataLayer push code is placed below here for view_item_list event -->
+    <script>
+  dataLayer.push({ ecommerce: null });  // Clears any previous ecommerce data
+  // Push new event data to dataLayer
+  dataLayer.push({
+    event: "view_item",  // Event name
+    ecommerce: {
+        currency: 'USD',
+        value: 10,
+      items: [
+        {
+          item_id: "b1",  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector(".book-card:nth-child(1) h3").innerText,  // Dynamically fetch the book name
+          affiliation: "Book Store",  // Name of the store (can be dynamic)
+          coupon : 'SUMMER FUN',
+          discount : 2.22,
+          index : 0,
+          price: document.querySelector(".book-card:nth-child(1) .quantity-input").getAttribute('data-price'),  // Fetch price from data-price attribute
+          quantity: document.querySelector("#quantity1").value,  // Dynamically get quantity selected by user4
+          item_brand : 'Spiritual',
+          item_category: "Books",  // Static or dynamic category (if applicable)
+          item_variant: "Standard",  // Variant of the item (if applicable, like edition or color)
+          location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",  // Store location ID (optional, if needed)
+          item_list_id: "books_on_sale",  // Same list ID as above
+          item_list_name: "Purchase Your Favorite Books",  // Same list name as above
+        }
+      ]
+    }
+  });
+</script>
+
+</body>
+</html>
