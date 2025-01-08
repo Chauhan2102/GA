@@ -44,7 +44,37 @@
     <div class="book-container">
         <div class="book-card">
             <img src="../images/book1.jpg" alt="Book 1">
-            <h3>Bhagavat Gita </h3>
+            <h3><a href="../pages/book details/gita.html"
+              onclick="
+                   dataLayer.push({ ecommerce: null }); 
+                   dataLayer.push({
+                     event: 'select_item',
+                     ecommerce: {
+                       item_list_id: 'books_on_sale',
+                       item_list_name: 'Purchase Your Favorite Books',
+                       items: [
+                         {
+                           item_id: 'b1',
+                           item_name: 'Bhagavat Gita',
+                           affiliation: 'Book Store',
+                           coupon: 'SUMMER FUN',
+                           discount: 2.22,
+                           index: 0,
+                           item_brand : 'Spiritual Book',
+                           item_category: 'Books',
+                           item_variant: 'Standard',
+                           item_list_id: 'books_on_sale',
+                           item_list_name: 'Purchase Your Favorite Books',
+                           location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+                           price: 10,
+                           quantity: document.querySelector('#quantity1').value,
+                         }
+                       ]
+                     }
+                   });
+                   "
+              >
+            Bhagavat Gita </h3></a>
             <p>Price: $10</p>
             <p>Description: The lessons of life how to live</p>
             <label for="quantity1">Quantity:</label>
@@ -55,7 +85,34 @@
 
         <div class="book-card">
             <img src="../images/book2.jpg" alt="Book 2">
-            <h3>Ramayan</h3>
+            <h3><a href="../pages/book details/ramayan.html" 
+              onclick="
+                dataLayer.push({ ecommerce: null }); 
+                   dataLayer.push({
+                     event: 'select_item',
+                     ecommerce: {
+                       item_list_id: 'books_on_sale',
+                       item_list_name: 'Purchase Your Favorite Books',
+                       items: [
+                         {
+                          item_id: 'b2',
+                          item_name: document.querySelector('.book-card:nth-child(2) h3').innerText,
+                          affiliation: 'Book Store',
+                          coupon: 'SUMMER FUN',
+                          discount: 2.22,
+                          price: document.querySelector('.book-card:nth-child(2) .quantity-input').getAttribute('data-price'),
+                          quantity: document.querySelector('#quantity2').value,
+                          item_brand: 'Spiritual Book',
+                          item_category: 'Books',
+                          item_variant: 'Standard',
+                          location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+                          item_list_id: 'books_on_sale',
+                          item_list_name: 'Purchase Your Favorite Books',
+                         }
+                       ]
+                     }
+                   });"
+             >Ramayan</h3></a>
             <p>Price: $15</p>
             <p>Description: The Life of Lord Rama</p>
             <label for="quantity2">Quantity:</label>
@@ -66,7 +123,34 @@
 
         <div class="book-card">
             <img src="../images/book3.jpg" alt="Book 3">
-            <h3>Shiv Shakti</h3>
+            <h3><a href="../pages/book details/shiv.html"
+              onclick="
+                dataLayer.push({ ecommerce: null }); 
+                   dataLayer.push({
+                     event: 'select_item',
+                     ecommerce: {
+                       item_list_id: 'books_on_sale',
+                       item_list_name: 'Purchase Your Favorite Books',
+                       items: [
+                         {
+                          item_id: 'b3',
+                          item_name: document.querySelector('.book-card:nth-child(3) h3').innerText,
+                          affiliation: 'Book Store',
+                          coupon: 'SUMMER FUN',
+                          discount: 2.22,
+                          price: document.querySelector('.book-card:nth-child(3) .quantity-input').getAttribute('data-price'),
+                          quantity: document.querySelector('#quantity3').value,
+                          item_brand: 'Spiritual Book',
+                          item_category: 'Books',
+                          item_variant: 'Standard',
+                          location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+                          item_list_id: 'books_on_sale',
+                          item_list_name: 'Purchase Your Favorite Books',
+                         }
+                       ]
+                     }
+                   });"
+              >Shiv Shakti</h3></a>
             <p>Price: $20</p>
             <p>Description: The Shiv Shakti Power</p>
             <label for="quantity3">Quantity:</label>
