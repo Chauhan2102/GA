@@ -110,3 +110,21 @@ input, select, textarea {
     margin-top: 20px;
     text-align: center;
 }
+
+/* Banner Styling */
+.banner {
+    margin-top: 20px; /* Adds space between the button and the banner */
+    display: flex;
+    justify-content: center; /* Center the banner image */
+    align-items: center;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 800px; /* Limits the width to 800px */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 8px; /* Optional: rounded corners for the banner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: shadow to make the banner pop */
+    margin-top: 20px; /* Ensures there’s space above the banner */
+}
