@@ -70,7 +70,12 @@
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" placeholder="Tell us about yourself" required></textarea>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit"
+            onclick = "
+            event : 'form_submit',
+            user_id : 123,    
+            "
+            >Submit</button>
     </form>
     <div class="social-links">
         <p>Follow us on:</p>
