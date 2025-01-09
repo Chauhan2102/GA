@@ -70,12 +70,7 @@
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" placeholder="Tell us about yourself" required></textarea>
         </div>
-        <button type="submit"
-            onclick = "
-            event : 'form_submit',
-            user_id : 123,    
-            "
-            >Submit</button>
+        <button type="submit">Submit</button>
     </form>
     <div class="social-links">
         <p>Follow us on:</p>
@@ -91,6 +86,11 @@
         // Handle form submission
         document.getElementById('newsletter-form').addEventListener('submit', function(event) {
             event.preventDefault();
+            // Push the form submit event to dataLayer
+            window.dataLayer.push({
+                event: 'form_submit',
+                user_id: 123
+            });
             alert("Thank you for joining us!");
             // Here you would typically send the form data to your server
         });
