@@ -45,40 +45,38 @@
     <div class="banner">
          <a href="banner.html">
         <img id = "banner-123" src="https://t4.ftcdn.net/jpg/09/25/98/71/360_F_925987113_ET531zj5nk7fLsqtk37qsYY2jnBNUMkW.jpg" alt="Banner"
-            onclick = "
-             dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-dataLayer.push({
-  event: "select_promotion",
-  ecommerce: {
-    creative_name: "Spiritual Book Banner",
-    creative_slot: "cs_1",
-    promotion_id: "P_123",
-    promotion_name: "Exclusive Offer: 20% Off on Spirituality Books!",
-    items: [
-    {
-      item_id: "SKU_12345",
-      item_name: "Stan and Friends Tee",
-      affiliation: "Google Merchandise Store",
-      coupon: "SPIRIT20",
-      discount: 2.22,
-      index: 0,
-      item_brand: "Google",
-      item_category: "Apparel",
-      item_category2: "Adult",
-      item_category3: "Shirts",
-      item_category4: "Crew",
-      item_category5: "Short sleeve",
-      item_list_id: "related_products",
-      item_list_name: "Related Products",
-      item_variant: "green",
-      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 10.01,
-      quantity: 3
-    }
-    ]
-  }
-});
-             "
+             onclick=" 
+                dataLayer.push({ ecommerce: null }); 
+                dataLayer.push({
+                    event: 'select_promotion',
+                    ecommerce: {
+                        creative_name: 'Spiritual Book Banner',
+                        creative_slot: 'cs_1',
+                        promotion_id: 'P_123',
+                        promotion_name: 'Exclusive Offer: 20% Off on Spirituality Books!',
+                        items: [{
+                            item_id: 'SKU_12345',
+                            item_name: 'Stan and Friends Tee',
+                            affiliation: 'Google Merchandise Store',
+                            coupon: 'SPIRIT20',
+                            discount: 2.22,
+                            index: 0,
+                            item_brand: 'Google',
+                            item_category: 'Apparel',
+                            item_category2: 'Adult',
+                            item_category3: 'Shirts',
+                            item_category4: 'Crew',
+                            item_category5: 'Short sleeve',
+                            item_list_id: 'related_products',
+                            item_list_name: 'Related Products',
+                            item_variant: 'green',
+                            location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+                            price: 10.01,
+                            quantity: 3
+                        }]
+                    }
+                });
+            "
             >
          </a>
     </div>
