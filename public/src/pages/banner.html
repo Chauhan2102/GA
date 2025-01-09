@@ -14,8 +14,45 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <title>Banner</title>
     <link rel="stylesheet" href="../style/main.css">
+    <style>
+        /* Additional CSS for banner content */
+        .promotion-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .promotion-container h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .promotion-container p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .promotion-container .cta-button {
+            padding: 15px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: none;
+            display: inline-block;
+        }
+
+        .promotion-container .cta-button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
     
@@ -30,22 +67,23 @@
         </div>
         <div class="nav-a">
             <a href="./home.html" class="nav-a home-link">Home</a>
-            <a href="./newsletter.html" class="nav-a news-link">NewsLetter</a>
-            <a href="./login.html" class="nav-a profile-link">Profile</a>
-            <a href="./contact.html" class="nav-a contact-link">Contact us</a>
             <a href="./purchasebook.html" class="nav-a buy-link">Buy</a>
         </div>
     </nav>
-    <h1>Hello! Google Analytics</h1>
-    <div class="button"></div>
-    <button onclick="window.location.href='https://blog.google/products/marketingplatform/analytics/';">
-        GA blog
-    </button>
+    <h1>Promotional Banner for Spirituality</h1>
+        
     <!-- Banner Section -->
     <div class="banner">
-         <a href="banner.html">
-        <img id = "banner-123" src="https://t4.ftcdn.net/jpg/09/25/98/71/360_F_925987113_ET531zj5nk7fLsqtk37qsYY2jnBNUMkW.jpg" alt="Banner">
-         </a>
+         <img id = "banner-123" src="https://t4.ftcdn.net/jpg/09/25/98/71/360_F_925987113_ET531zj5nk7fLsqtk37qsYY2jnBNUMkW.jpg" alt="Banner">
     </div>
+    
+    <!-- Promotional Content Section -->
+    <div class="promotion-container">
+        <h2>Exclusive Offer: 20% Off on Spirituality Books!</h2>
+        <p>Get 20% off your first purchase of spiritual books. Use the code <strong>SPIRIT20</strong> at checkout.</p>
+        <p>Discover the best books to enrich your spiritual journey. Don't miss out on this limited-time offer!</p>
+        <a href="./purchasebook.html" class="cta-button">Shop Now</a>
+    </div>
+
 </body>
 </html>
