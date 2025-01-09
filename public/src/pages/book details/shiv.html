@@ -26,7 +26,7 @@
     <!-- Navigation Bar -->
     <nav class="nav-bar">
         <div class="nav-text">
-            <h2>PDP Page</h2>
+            <h2>PDP page</h2>
         </div>
         <div class="nav-a">
             <a href="../home.html" class="nav-a home-link">Home</a>
@@ -40,7 +40,7 @@
     <!-- Cart-like layout for books -->
     <div class="book-container">
         <div class="book-card">
-            <img src="/GA/public/src/images/book3.jpg" alt="Book 3">
+            <img src="/GA/public/src/images/book1.jpg" alt="Book 1">
             <h3>Bhagavat Gita </h3>
             <p>Price: $10</p>
             <p>Description: The lessons of life how to live</p>
@@ -53,17 +53,17 @@
     event: 'add_to_cart',  
     ecommerce: {
         currency: 'USD',
-        value: 20,
+        value: 10,
       items: [
         {
-          item_id: 'b3',  // Unique item ID (SKU or another identifier)
-          item_name: document.querySelector('.book-card:nth-child(3) h3').innerText,
+          item_id: 'b1',  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
           affiliation: 'Book Store',  // Name of the store (can be dynamic)
           coupon : 'SUMMER FUN',
           discount : 2.22,
-          index : 2,
-          price: document.querySelector('.book-card:nth-child(3) .quantity-input').getAttribute('data-price'),  
-          quantity: document.querySelector('#quantity3').value,  
+          index : 0,
+          price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),  
+          quantity: document.querySelector('#quantity1').value,  
           item_brand : 'Spiritual',
           item_category: 'Books',  
           item_variant: 'Standard', 
@@ -75,7 +75,6 @@
     }
   });
             "
-            
             >Add to Cart</button>
             <div><a href="/public/src/pages/tutorial.html" class="tutorial-link">Tutorial</a></div>
         </div>
@@ -92,29 +91,29 @@
   dataLayer.push({
     event: 'purchase',  
     ecommerce: {
-        transaction_id: 'T_1234',
-    value: 82.05,
+        transaction_id: 'T_123',
+    value: 72.05,
     tax: 3.60,
     shipping: 5.99,
     currency: 'USD',
     coupon: 'SUMMER_SALE',
-        value: 20,
+        value: 10,
       items: [
         {
-          item_id: 'b3',  // Unique item ID (SKU or another identifier)
-          item_name: document.querySelector('.book-card:nth-child(3) h3').innerText,
+          item_id: 'b1',  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
           affiliation: 'Book Store',  // Name of the store (can be dynamic)
           coupon : 'SUMMER FUN',
           discount : 2.22,
-          index : 2, 
+          index : 0, 
           item_brand : 'Spiritual',
           item_category: 'Books',  
           item_variant: 'Standard', 
           location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',  
           item_list_id: 'books_on_sale',  
           item_list_name: 'Purchase Your Favorite Books',
-          price: document.querySelector('.book-card:nth-child(3) .quantity-input').getAttribute('data-price'),  
-          quantity: document.querySelector('#quantity3').value, 
+          price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),  
+          quantity: document.querySelector('#quantity1').value, 
         }
       ]
     }
@@ -133,17 +132,17 @@
     event: "view_item",  // Event name
     ecommerce: {
         currency: 'USD',
-        value: 20,
+        value: 10,
       items: [
         {
-          item_id: "b3",  // Unique item ID (SKU or another identifier)
-          item_name: document.querySelector(".book-card:nth-child(3) h3").innerText,  // Dynamically fetch the book name
+          item_id: "b1",  // Unique item ID (SKU or another identifier)
+          item_name: document.querySelector(".book-card:nth-child(1) h3").innerText,  // Dynamically fetch the book name
           affiliation: "Book Store",  // Name of the store (can be dynamic)
           coupon : 'SUMMER FUN',
           discount : 2.22,
-          index : 2,
-          price: document.querySelector(".book-card:nth-child(3) .quantity-input").getAttribute('data-price'),  // Fetch price from data-price attribute
-          quantity: document.querySelector("#quantity3").value,  // Dynamically get quantity selected by user4
+          index : 0,
+          price: document.querySelector(".book-card:nth-child(1) .quantity-input").getAttribute('data-price'),  // Fetch price from data-price attribute
+          quantity: document.querySelector("#quantity1").value,  // Dynamically get quantity selected by user4
           item_brand : 'Spiritual',
           item_category: "Books",  // Static or dynamic category (if applicable)
           item_variant: "Standard",  // Variant of the item (if applicable, like edition or color)
