@@ -79,7 +79,40 @@
             <p>Description: The lessons of life how to live</p>
             <label for="quantity1">Quantity:</label>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" data-price="10" class="quantity-input">
-            <button class="add-to-cart" data-book="Book 1" data-price="10">Add to Cart</button>
+            <button class="add-to-cart" data-book="Book 1" data-price="10"
+            onclick="
+            dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: 'add_to_wishlist',
+  ecommerce: {
+    currency: 'USD',
+    value: 30.03,
+    items: [
+    {
+      item_id: 'b1',
+      item_name: 'Stan and Friends Tee',
+      affiliation: 'Google Merchandise Store',
+      coupon: 'SUMMER_FUN',
+      discount: 2.22,
+      index: 0,
+      item_brand: 'Google',
+      item_category: 'Apparel',
+      item_category2: 'Adult',
+      item_category3: 'Shirts',
+      item_category4: 'Crew',
+      item_category5: 'Short sleeve',
+      item_list_id: 'related_products',
+      item_list_name: 'Related Products',
+      item_variant: 'green',
+      location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+      price: 10.01,
+      quantity: 3
+    }
+    ]
+  }
+});
+            "
+            >Add wishlist</button>
             <div><a href="./tutorial.html" class="tutorial-link">Tutorial</a></div>
         </div>
 
@@ -117,7 +150,40 @@
             <p>Description: The Life of Lord Rama</p>
             <label for="quantity2">Quantity:</label>
             <input type="number" id="quantity2" name="quantity" min="1" value="1" data-price="15" class="quantity-input">
-            <button class="add-to-cart" data-book="Book 2" data-price="15">Add to Cart</button>
+            <button class="add-to-cart" data-book="Book 2" data-price="15"
+            onclick="
+            dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: 'add_to_wishlist',
+  ecommerce: {
+    currency: 'USD',
+    value: 30.03,
+    items: [
+    {
+      item_id: 'b2',
+      item_name: 'Stan and Friends Tee',
+      affiliation: 'Google Merchandise Store',
+      coupon: 'SUMMER_FUN',
+      discount: 2.22,
+      index: 0,
+      item_brand: 'Google',
+      item_category: 'Apparel',
+      item_category2: 'Adult',
+      item_category3: 'Shirts',
+      item_category4: 'Crew',
+      item_category5: 'Short sleeve',
+      item_list_id: 'related_products',
+      item_list_name: 'Related Products',
+      item_variant: 'green',
+      location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+      price: 10.01,
+      quantity: 3
+    }
+    ]
+  }
+});
+            "
+            >Add wishlist</button>
             <div><a href="./tutorial.html" class="tutorial-link">Tutorial</a></div>
         </div>
 
@@ -155,7 +221,40 @@
             <p>Description: The Shiv Shakti Power</p>
             <label for="quantity3">Quantity:</label>
             <input type="number" id="quantity3" name="quantity" min="1" value="1" data-price="20" class="quantity-input">
-            <button class="add-to-cart" data-book="Book 3" data-price="20">Add to Cart</button>
+            <button class="add-to-cart" data-book="Book 3" data-price="20"
+            onclick="
+            dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: 'add_to_wishlist',
+  ecommerce: {
+    currency: 'USD',
+    value: 30.03,
+    items: [
+    {
+      item_id: 'b3',
+      item_name: 'Stan and Friends Tee',
+      affiliation: 'Google Merchandise Store',
+      coupon: 'SUMMER_FUN',
+      discount: 2.22,
+      index: 0,
+      item_brand: 'Google',
+      item_category: 'Apparel',
+      item_category2: 'Adult',
+      item_category3: 'Shirts',
+      item_category4: 'Crew',
+      item_category5: 'Short sleeve',
+      item_list_id: 'related_products',
+      item_list_name: 'Related Products',
+      item_variant: 'green',
+      location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
+      price: 10.01,
+      quantity: 3
+    }
+    ]
+  }
+});
+            "
+            >Add wishlist</button>
             <div><a href="./tutorial.html" class="tutorial-link">Tutorial</a></div>
         </div>
     </div>
@@ -169,6 +268,8 @@
     </div>
 
     <script src="../functions/cart.js"></script>
+    <script src="../functions/wishlist.js"></script>
+
 
     <!-- DataLayer push code is placed below here for view_item_list event -->
     <script>
