@@ -50,7 +50,7 @@
     <!-- Login page start here -->
     <div class="login-container">
         <h2>Login</h2>
-        <form id="login-form" class="login-form" action="#" method="POST" onsubmit="return authenticate()">
+        <form id="login-form" class="login-form" action="#" method="POST" onsubmit="return authenticate(event)">
             <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -66,7 +66,9 @@
 
     <script>
         // Authentication function to check user credentials
-        function authenticate() {
+        function authenticate(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
             var authorised = false;
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
@@ -75,43 +77,43 @@
             if(username == "abcd" && password == "pass123") {
                 authorised = true;
                 alert("Login successful");
-                window.location.href = "./home.html";
                 dataLayer.push({
                     'event': 'login_success',
                     'user_id': 'p123'
                 });
+                window.location.href = "./home.html"; // Redirect to home
             } else if (username == "kashish" && password == "kash123") {
                 authorised = true;
                 alert("Login successful");
-                window.location.href = "./home.html";
                 dataLayer.push({
                     'event': 'login_success',
                     'user_id': 'k123'
                 });
+                window.location.href = "./home.html"; // Redirect to home
             } else if (username == "rohit" && password == "roh123") {
                 authorised = true;
                 alert("Login successful");
-                window.location.href = "./home.html";
                 dataLayer.push({
                     'event': 'login_success',
                     'user_id': 'r123'
                 });
+                window.location.href = "./home.html"; // Redirect to home
             } else if (username == "bhama" && password == "bham123") {
                 authorised = true;
                 alert("Login successful");
-                window.location.href = "./home.html";
                 dataLayer.push({
                     'event': 'login_success',
                     'user_id': 'b123'
                 });
+                window.location.href = "./home.html"; // Redirect to home
             } else if (username == "hemant" && password == "hem123") {
                 authorised = true;
                 alert("Login successful");
-                window.location.href = "./home.html";
                 dataLayer.push({
                     'event': 'login_success',
                     'user_id': 'h123'
                 });
+                window.location.href = "./home.html"; // Redirect to home
             } else {
                 authorised = false;
                 alert("Password is incorrect.");
