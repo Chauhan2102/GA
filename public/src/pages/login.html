@@ -3,11 +3,6 @@
     <head>
     <script>
         window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'login',  // Optional: a custom event for trigger purposes
-  'user_id': '123',      // Replace 'USER_ID' with the actual user ID
-  'method' : 'manually' // could be anyting as per users option mail, manual or phone number but for now manually
-});
         </script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -61,12 +56,65 @@ window.dataLayer.push({
                 <p class="forgot-password"><a href="#">Forgot Password?</a></p>
             </div>
             <script>
-                // Handle form submission
-                document.getElementById('login-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    alert("You have sucessfully logged in");
-                    // Here you would typically send the form data to your server
+        // Authentication function to check user credentials
+        function authenticate() {
+            var authorised = false;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Check if the username and password match predefined values
+            if(username == "abcd" && password == "pass123") {
+                authorised = true;
+                alert("Login successful");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_success',
+                    'user_id': 'p123'
                 });
-            </script>
+            } else if (username == "kashish" && password == "kash123") {
+                authorised = true;
+                alert("Login successful");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_success',
+                    'user_id': 'k123'
+                });
+            } else if (username == "rohit" && password == "roh123") {
+                authorised = true;
+                alert("Login successful");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_success',
+                    'user_id': 'r123'
+                });
+            } else if (username == "bhama" && password == "bham123") {
+                authorised = true;
+                alert("Login successful");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_success',
+                    'user_id': 'b123'
+                });
+            } else if (username == "hemant" && password == "hem123") {
+                authorised = true;
+                alert("Login successful");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_success',
+                    'user_id': 'h123'
+                });
+            } else {
+                authorised = false;
+                alert("Sorry, password is incorrect.");
+                window.location.href = "home.html";
+                dataLayer.push({
+                    'event': 'login_failed'
+                });
+            }
+            return authorised;
+        }
+    </script>
+</body>
+</html>
     </body>
     </html>
