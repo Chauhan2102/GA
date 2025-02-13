@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('checkout-btn').addEventListener('click', () => {
+        // Show the alert with the total price
         alert(`Your total is $${totalPrice.toFixed(2)}. Proceed to checkout.`);
-        // Additional checkout logic can be implemented here
+
+        // After the alert, redirect to the thankyou page
+        document.getElementById('checkout-link').click();
     });
 });
