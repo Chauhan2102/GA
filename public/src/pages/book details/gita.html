@@ -11,8 +11,8 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PF8RZW34');</script>
     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" href="/GA/public/src/style/nav.css">
-    <link rel="stylesheet" href="/GA/public/src/style/buy.css">
+    <link rel="stylesheet" href="/public/src/style/nav.css">
+    <link rel="stylesheet" href="/public/src/style/buy.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDP Page</title>
@@ -40,7 +40,7 @@
     <!-- Cart-like layout for books -->
     <div class="book-container">
         <div class="book-card">
-            <img src="/GA/public/src/images/book1.jpg" alt="Book 1">
+            <img src="/public/src/images/book1.jpg" alt="Book 1">
             <h3>Bhagavat Gita </h3>
             <p>Price: $10</p>
             <p>Description: The lessons of life how to live</p>
@@ -85,19 +85,20 @@
         <h2>Your Cart</h2>
         <ul id="cart-items"></ul>
         <h3>Total: $<span id="total-price">0.00</span></h3>
+        <a id="checkout-link" href="/public/src/pages/thankyou-page.html"></a>
         <button id="checkout-btn"
         onclick="
             dataLayer.push({ ecommerce: null });
   dataLayer.push({
     event: 'purchase',  
     ecommerce: {
-        transaction_id: 'T_123',
+    transaction_id: 'T_123',
     value: 72.05,
     tax: 3.60,
     shipping: 5.99,
     currency: 'USD',
     coupon: 'SUMMER_SALE',
-        value: 10,
+    value: 10,
       items: [
         {
           item_id: 'b1',  // Unique item ID (SKU or another identifier)
@@ -111,7 +112,7 @@
           item_variant: 'Standard', 
           location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',  
           item_list_id: 'books_on_sale',  
-          item_list_name: 'Purchase Your Favorite Books',
+          item_list_name: 'books_on_Sale',
           price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),  
           quantity: document.querySelector('#quantity1').value, 
         }
@@ -122,7 +123,7 @@
         >Checkout</button>
     </div>
 
-    <script src="/GA/public/src/functions/cart.js"></script>
+    <script src="/public/src/functions/cart.js"></script>
 
     <!-- DataLayer push code is placed below here for view_item_list event -->
     <script>
@@ -148,7 +149,7 @@
           item_variant: "Standard",  // Variant of the item (if applicable, like edition or color)
           location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",  // Store location ID (optional, if needed)
           item_list_id: "books_on_sale",  // Same list ID as above
-          item_list_name: "Purchase Your Favorite Books",  // Same list name as above
+          item_list_name: "books_on_sale",  // Same list name as above
         }
       ]
     }

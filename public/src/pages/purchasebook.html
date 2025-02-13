@@ -32,7 +32,6 @@
             <a href="./home.html" class="nav-a home-link">Home</a>
             <a href="./newsletter.html" class="nav-a news-link">NewsLetter</a>
             <a href="./login.html" class="nav-a Profile-link">Profile</a>
-            <a href="./contact.html" class="nav-a contact-link">Contact us</a>
             <a href="./purchasebook.html" class="nav-a buy-link">Buy</a>
         </div>
     </nav>
@@ -51,22 +50,28 @@
                      event: 'select_item',
                      ecommerce: {
                        item_list_id: 'books_on_sale',
-                       item_list_name: 'Purchase Your Favorite Books',
+                       item_list_name: 'books_on_sale',
                        items: [
                          {
                            item_id: 'b1',
-                           item_name: 'Bhagavat Gita',
+                           item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
                            affiliation: 'Book Store',
                            coupon: 'SUMMER FUN',
                            discount: 2.22,
                            index: 0,
                            item_brand : 'Spiritual Book',
                            item_category: 'Books',
-                           item_variant: 'Standard',
+                           item_category2: 'Adult',
+                           item_category3: 'Shirts',
+                           item_category4: 'In stock',
+                           item_category5: 'Short sleeve',
                            item_list_id: 'books_on_sale',
-                           item_list_name: 'Purchase Your Favorite Books',
+                           item_list_name: 'books_on_sale',
+                           item_variant: 'green',
+                           item_list_id: 'books_on_sale',
+                           item_list_name: 'books_on_sale',
                            location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-                           price: 10,
+                           price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),
                            quantity: document.querySelector('#quantity1').value,
                          }
                        ]
@@ -90,23 +95,23 @@ dataLayer.push({
     items: [
     {
       item_id: 'b1',
-      item_name: 'Stan and Friends Tee',
-      affiliation: 'Google Merchandise Store',
+      item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
+      affiliation: 'Book store',
       coupon: 'SUMMER_FUN',
       discount: 2.22,
       index: 0,
-      item_brand: 'Google',
-      item_category: 'Apparel',
+      item_brand: 'Spiritual book',
+      item_category: 'books',
       item_category2: 'Adult',
       item_category3: 'Shirts',
-      item_category4: 'Crew',
+      item_category4: 'In stock',
       item_category5: 'Short sleeve',
-      item_list_id: 'related_products',
-      item_list_name: 'Related Products',
+      item_list_id: 'books_on_sale',
+      item_list_name: 'books_on_sale',
       item_variant: 'green',
       location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-      price: 10.01,
-      quantity: 3
+      price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity1').value,
     }
     ]
   }
@@ -125,7 +130,7 @@ dataLayer.push({
                      event: 'select_item',
                      ecommerce: {
                        item_list_id: 'books_on_sale',
-                       item_list_name: 'Purchase Your Favorite Books',
+                       item_list_name: 'books_on_sale',
                        items: [
                          {
                           item_id: 'b2',
@@ -137,10 +142,17 @@ dataLayer.push({
                           quantity: document.querySelector('#quantity2').value,
                           item_brand: 'Spiritual Book',
                           item_category: 'Books',
+                          item_category2: 'Adult',
+                          item_category3: 'Shirts',
+                          item_category4: 'In stock',
+                          item_category5: 'Short sleeve',
+                          item_list_id: 'books_on_sale',
+                          item_list_name: 'books_on_sale',
+                          item_variant: 'green',
                           item_variant: 'Standard',
                           location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
                           item_list_id: 'books_on_sale',
-                          item_list_name: 'Purchase Your Favorite Books',
+                          item_list_name: 'books_on_sale',
                          }
                        ]
                      }
@@ -161,23 +173,23 @@ dataLayer.push({
     items: [
     {
       item_id: 'b2',
-      item_name: 'Stan and Friends Tee',
-      affiliation: 'Google Merchandise Store',
+      item_name: document.querySelector('.book-card:nth-child(2) h3').innerText,
+      affiliation: 'Book store',
       coupon: 'SUMMER_FUN',
       discount: 2.22,
       index: 0,
       item_brand: 'Google',
-      item_category: 'Apparel',
+      item_category: 'books',
       item_category2: 'Adult',
       item_category3: 'Shirts',
-      item_category4: 'Crew',
+      item_category4: 'In stock',
       item_category5: 'Short sleeve',
       item_list_id: 'related_products',
       item_list_name: 'Related Products',
       item_variant: 'green',
       location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-      price: 10.01,
-      quantity: 3
+      price: document.querySelector('.book-card:nth-child(2) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity2').value,
     }
     ]
   }
@@ -196,7 +208,7 @@ dataLayer.push({
                      event: 'select_item',
                      ecommerce: {
                        item_list_id: 'books_on_sale',
-                       item_list_name: 'Purchase Your Favorite Books',
+                       item_list_name: 'books_on_sale',
                        items: [
                          {
                           item_id: 'b3',
@@ -208,6 +220,9 @@ dataLayer.push({
                           quantity: document.querySelector('#quantity3').value,
                           item_brand: 'Spiritual Book',
                           item_category: 'Books',
+                          item_category2: 'Adult',
+                          item_category3: 'Shirts',
+                          item_category4: 'Out of stock',
                           item_variant: 'Standard',
                           location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
                           item_list_id: 'books_on_sale',
@@ -232,23 +247,23 @@ dataLayer.push({
     items: [
     {
       item_id: 'b3',
-      item_name: 'Stan and Friends Tee',
-      affiliation: 'Google Merchandise Store',
+      item_name: document.querySelector('.book-card:nth-child(3) h3').innerText,
+      affiliation: 'book store',
       coupon: 'SUMMER_FUN',
       discount: 2.22,
-      index: 0,
-      item_brand: 'Google',
-      item_category: 'Apparel',
+      index: 2,
+      item_brand: 'Spiritual Book',
+      item_category: 'Books',
       item_category2: 'Adult',
       item_category3: 'Shirts',
-      item_category4: 'Crew',
+      item_category4: 'Out of stock',
       item_category5: 'Short sleeve',
-      item_list_id: 'related_products',
-      item_list_name: 'Related Products',
+      item_list_id: 'books_on_sale',
+      item_list_name: 'books_on_sale',
       item_variant: 'green',
       location_id: 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-      price: 10.01,
-      quantity: 3
+      price: document.querySelector('.book-card:nth-child(3) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity3').value,
     }
     ]
   }
@@ -260,12 +275,6 @@ dataLayer.push({
     </div>
 
     <!-- Cart Section -->
-    <div class="cart-container">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <h3>Total: $<span id="total-price">0.00</span></h3>
-        <button id="checkout-btn">Checkout</button>
-    </div>
 
     <script src="../functions/cart.js"></script>
     <script src="../functions/wishlist.js"></script>
@@ -278,50 +287,72 @@ dataLayer.push({
 dataLayer.push({
   event: "view_item_list",
   ecommerce: {
-    item_list_id: "related_products",
-    item_list_name: "Related products",
+    item_list_id: "books_on_sale",
+    item_list_name: "books_on_sale",
     items: [
      {
-      item_id: "SKU_12345",
-      item_name: "Stan and Friends Tee",
-      affiliation: "Google Merchandise Store",
+      item_id: "b1",
+      item_name: document.querySelector('.book-card:nth-child(1) h3').innerText,
+      affiliation: "Book store",
       coupon: "SUMMER_FUN",
       discount: 2.22,
       index: 0,
-      item_brand: "Google",
+      item_brand: "Spiritual Book",
       item_category: "Apparel",
       item_category2: "Adult",
       item_category3: "Shirts",
-      item_category4: "Crew",
+      item_category4: "In stock",
       item_category5: "Short sleeve",
-      item_list_id: "related_products",
-      item_list_name: "Related Products",
+      item_list_id: 'books_on_sale',
+      item_list_name: 'books_on_sale',
       item_variant: "green",
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 10.03,
-      quantity: 3
+      price: document.querySelector('.book-card:nth-child(1) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity1').value,
     },
     {
-      item_id: "SKU_12346",
-      item_name: "Google Grey Women's Tee",
-      affiliation: "Google Merchandise Store",
+      item_id: "b2",
+      item_name: document.querySelector('.book-card:nth-child(2) h3').innerText,
+      affiliation: "Book store",
       coupon: "SUMMER_FUN",
       discount: 3.33,
       index: 1,
-      item_brand: "Google",
+      item_brand: "Spiritual Book",
       item_category: "Apparel",
       item_category2: "Adult",
       item_category3: "Shirts",
-      item_category4: "Crew",
+      item_category4: "In stock",
       item_category5: "Short sleeve",
-      item_list_id: "related_products",
-      item_list_name: "Related Products",
+      item_list_id: "books_on_sale",
+      item_list_name: "books_on_sale",
       item_variant: "gray",
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 21.01,
       promotion_id: "P_12345",
       promotion_name: "Summer Sale",
-      quantity: 2
+      price: document.querySelector('.book-card:nth-child(2) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity2').value,
+  },
+  {
+      item_id: "b3",
+      item_name: document.querySelector('.book-card:nth-child(3) h3').innerText,
+      affiliation: "Book store",
+      coupon: "SUMMER_FUN",
+      discount: 3.33,
+      index: 2,
+      item_brand: "Spiritual Book",
+      item_category: "Apparel",
+      item_category2: "Adult",
+      item_category3: "Shirts",
+      item_category4: "Out of stock",
+      item_category5: "Short sleeve",
+      item_list_id: "books_on_sale",
+      item_list_name: "books_on_Sale",
+      item_variant: "gray",
+      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+      promotion_id: "P_12345",
+      promotion_name: "Summer Sale",
+      price: document.querySelector('.book-card:nth-child(3) .quantity-input').getAttribute('data-price'),
+      quantity: document.querySelector('#quantity3').value,
     }]
   }
 });
