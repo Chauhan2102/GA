@@ -88,7 +88,7 @@
         <a id="checkout-link" href="/GA/public/src/pages/thankyou-page.html"></a>
         <button id="checkout-btn"
         onclick="
-            var transactionId = 'T_' + Math.floor(Math.random() * 1000); // Random number between 0 and 999
+            var transactionId = 'T_' + Math.floor(Math.random() * 1000000); // Random number between 0 and 999
             dataLayer.push({ ecommerce: null });
   dataLayer.push({
     event: 'purchase',  
