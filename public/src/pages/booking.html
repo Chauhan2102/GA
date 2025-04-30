@@ -113,6 +113,8 @@
       order_id: orderId,
       value: 500,
       currency: "USD",
+      check_in : "03-25",
+      check_out : "04-35"
       items: [
         {
           item_id: "ROOM_DOUBLE_101",
@@ -136,8 +138,8 @@
       transaction_id: bookingId,
       order_id: orderId,
       modified_field: "check_in_date",
-      old_value: "2024-10-15",
-      new_value: "2024-10-17"
+      check_in: "10-25",
+      check_out: "11-25"
     });
   }
 
@@ -151,6 +153,8 @@
       transaction_id: bookingId + "_REFUND",
       value: 500,
       currency: "USD",
+check_in: "10-25",
+      check_out: "11-25"
       items: [
         {
           item_id: "ROOM_DOUBLE_101",
@@ -173,6 +177,8 @@
       order_id: orderId,
       value: 250 * roomQuantity,
       currency: "USD",
+check_in: "10-25",
+      check_out: "11-25"
       items: [
         {
           item_id: "ROOM_DOUBLE_101",
@@ -190,6 +196,8 @@
       transaction_id: bookingId,
       value: 250 * roomQuantity,
       currency: "USD",
+check_in: "10-25",
+      check_out: "11-25"
       items: [
         {
           item_id: "ROOM_DOUBLE_101",
