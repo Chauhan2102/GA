@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+        window.dataLayer = window.dataLayer || [];
+        </script>
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PF8RZW34');</script>
+    <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <title>Hotel Booking Flow</title>
   <style>
@@ -82,39 +92,6 @@
 
 </div>
 
-<h1>Hotel Booking GA4 Demo</h1>
-<div class="container">
-
-  <!-- Book Room -->
-  <div class="card">
-    <h2>1. Book Room</h2>
-    <button onclick="bookRoom()">Book Room</button>
-  </div>
-
-  <!-- Modify Date -->
-  <div class="card">
-    <h2>2. Modify Date</h2>
-    <button onclick="modifyDate()">Modify Check-in Date</button>
-  </div>
-
-  <!-- Room Quantity Change -->
-  <div class="card">
-    <h2>3. Change Room Quantity</h2>
-    <div class="quantity-controls">
-      <button onclick="changeQuantity(-1)">-1</button>
-      <span id="roomQuantity">1</span>
-      <button onclick="changeQuantity(1)">+1</button>
-    </div>
-  </div>
-
-  <!-- Cancel Booking -->
-  <div class="card">
-    <h2>4. Full Cancellation</h2>
-    <button onclick="cancelBooking()">Cancel Booking</button>
-  </div>
-
-</div>
-
 <!-- Data Layer -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -139,7 +116,7 @@
           quantity: roomQuantity,
           price: 250
         },
-{
+        {
           item_id: "ROOM_DOUBLE_102",
           item_name: "Double Room",
           quantity: roomQuantity,
@@ -177,7 +154,7 @@
           quantity: originalQuantity,
           price: 250
         },
- {
+        {
           item_id: "ROOM_DOUBLE_102",
           item_name: "Double Room",
           quantity: originalQuantity,
